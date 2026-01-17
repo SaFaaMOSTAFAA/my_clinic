@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
 
-# Create your views here.
+from appointments.models import Appointment
+from appointments.serializers import AppointmentSerializer
+
+
+class AppointmentViewSet(ModelViewSet):
+    queryset = Appointment.objects.all()
+    serializer_class = AppointmentSerializer
