@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
 
-# Create your views here.
+from visits.models import Visit
+from visits.serializers import VisitSerializer
+
+
+class VisitViewSet(ModelViewSet):
+    queryset = Visit.objects.all()
+    serializer_class = VisitSerializer
