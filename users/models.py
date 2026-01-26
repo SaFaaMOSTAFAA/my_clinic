@@ -21,7 +21,15 @@ class Doctor(User):
     specialization = models.CharField(max_length=255)
     experience_years = models.PositiveIntegerField()
 
+    class Meta:
+        verbose_name = "طبيب"
+        verbose_name_plural = "الأطباء"
+
 
 class Patient(User):
     age = models.PositiveIntegerField()
     medical_history = models.TextField(blank=True, null=True)
+
+    class Meta:
+        verbose_name = "مريض"
+        verbose_name_plural = "المرضى"
