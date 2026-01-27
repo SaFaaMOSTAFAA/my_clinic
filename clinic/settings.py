@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -127,3 +128,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+JAZZMIN_SETTINGS = {
+    "site_title": "My Clinic Admin",
+    "site_header": "My Clinic",
+    "welcome_sign": "Welcome to Clinic Dashboard",
+    "search_model": ["users.Patient"],
+}
